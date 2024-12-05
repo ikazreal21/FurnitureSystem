@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(BG.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    height: 900px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: lightgrey;
+}
+.logo {
+    position: absolute;
+    height: auto;
+    left: 5px;
+    width: 150px;
+    top: -45px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(240, 240, 240, 0.07);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+}
+
+nav li {
+    height: 70px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    background: #333;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    margin: 0;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ff9900; /* Orange */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #ff9900; /* Icon color */
+    font-size: 1.2rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: none;
+    border-bottom: 1px solid #757575;
+    font-size: 1rem;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-bottom: 2px solid #ff9900; /* Highlight */
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+label {
+    position: absolute;
+    top: 0.8rem;
+    left: 2.5rem;
+    color: #757575;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -0.8rem;
+    left: 1rem;
+    font-size: 0.8rem;
+    color: #ff9900; /* Highlight label */
+}
+
+.recover {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.recover a {
+    text-decoration: none;
+    color: #ff9900;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.recover a:hover {
+    color: #ffd27f; /* Light orange */
+    text-decoration: underline;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: #ff9900;
+    color: #333; /* Dark text for contrast */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background: #e68a00; /* Slightly darker orange */
+}
+
+.or {
+    text-align: center;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    color: #757575;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.icons i {
+    font-size: 1.5rem;
+    color: #ff9900;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icons i:hover {
+    color: #ffd27f; /* Hover effect */
+    transform: scale(1.1);
+}
+
+.links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.links p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+.links .a {
+    color: #fff;
+}
+
+button {
+    background: none;
+    border: none;
+    color: #ff9900;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+button:hover {
+    color: #ffd27f;
+    text-decoration: underline;
+}
+
+.sign-up-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .sign-up-footer p {
+            font-size: 1rem;
+            color:#ff9900;
+            margin-right: 10px;
+        }
+
+        .sign-up-footer button {
+            background-color: #ff9900;
+            color: black;
+            border-radius: 5px;
+            padding: 6px 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .sign-up-footer button:hover {
+            background-color:#ff9900;
+        }

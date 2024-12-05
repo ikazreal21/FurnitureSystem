@@ -1,0 +1,17 @@
+{
+    "name": "zaki/furniture-system",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zaki\\FurnitureSystem\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ikazreal21",
+            "email": "66871228+ikazreal21@users.noreply.github.com"
+        }
+    ]
+}
