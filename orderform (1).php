@@ -1,6 +1,6 @@
 <?php
 // Database connection
-$conn = new mysqli('localhost', 'root', '', 'go');
+$conn = new mysqli('192.168.1.228', 'cbadmin', '%rga8477#KC86&', 'go');
 
 // Check connection
 if ($conn->connect_error) {
@@ -51,7 +51,7 @@ $conn->close();
 ?>
 <?php
 // Database connection
-$conn = new mysqli('localhost', 'root', '', 'go');
+$conn = new mysqli('192.168.1.228', 'cbadmin', '%rga8477#KC86&', 'go');
 
 // Check connection
 if ($conn->connect_error) {

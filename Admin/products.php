@@ -1,7 +1,7 @@
 <?php
-$host = 'localhost';
+$host = '192.168.1.228';
 $dbname = 'go';
-$username = 'root';
+$username = 'cbadmin';
 $password = '';
 
 try {

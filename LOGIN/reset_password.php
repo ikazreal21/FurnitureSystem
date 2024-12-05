@@ -4,7 +4,7 @@ if (isset($_GET['token']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $newPassword = $_POST['password'];
 
     // Database connection
-    $conn = new mysqli('localhost', 'root', '', 'go');
+    $conn = new mysqli('192.168.1.228', 'cbadmin', '%rga8477#KC86&', 'go');
 
     if ($conn->connect_error) {
         die('Database connection failed: ' . $conn->connect_error);

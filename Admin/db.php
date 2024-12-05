@@ -1,7 +1,7 @@
 <?php
-$host = "localhost"; // Database host
-$user = "root";      // Database username
-$password = "";      // Database password
+$host = "192.168.1.228"; // Database host
+$user = "cbadmin";      // Database username
+$password = "%rga8477#KC86&";      // Database password
 $dbname = "go"; // Database name
 
 $conn = new mysqli($host, $user, $password, $dbname);

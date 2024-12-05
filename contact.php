@@ -2,7 +2,7 @@
 session_start(); // Start the session
 $isLoggedIn = isset($_SESSION['user_id']); // Check if the user is logged in (assumes 'user_id' is set in the session when logged in)
 
-$conn = new mysqli('localhost', 'root', '', 'go');
+$conn = new mysqli('192.168.1.228', 'cbadmin', '%rga8477#KC86&', 'go');
 
 // Check connection
 if ($conn->connect_error) {

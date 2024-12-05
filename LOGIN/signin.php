@@ -16,9 +16,9 @@ use PHPMailer\PHPMailer\Exception;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signIn'])) {
     // Database connection
-    $host = 'localhost';
-    $user = 'root';
-    $password = '';
+    $host = '192.168.1.228';
+    $user = 'cbadmin';
+    $password = '%rga8477#KC86&';
     $database = 'go';
 
     $conn = new mysqli($host, $user, $password, $database);
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signIn'])) {
             if ($email === 'admin@admin.com') {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['email'] = $email;
-                header("Location: ../admin/dashboard.php");
+                header("Location: ../Admin/dashboard.php");
                 exit();
             }
 

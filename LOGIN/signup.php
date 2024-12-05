@@ -11,9 +11,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signUp'])) {
     // Database connection
-    $host = 'localhost'; // Change this if necessary
-    $user = 'root'; // Database username
-    $password = ''; // Database password
+    $host = '192.168.1.228'; // Change this if necessary
+    $user = 'cbadmin'; // Database username
+    $password = '%rga8477#KC86&'; // Database password
     $database = 'go'; // Database name
 
     $conn = new mysqli($host, $user, $password, $database);
