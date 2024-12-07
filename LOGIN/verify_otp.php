@@ -2,10 +2,10 @@
 // Include PHPMailer
 session_start();
 
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-    header("Location: ../Home.php"); // Redirect to the home page
-    exit();
-}
+// if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+//     header("Location: ../Home.php"); // Redirect to the home page
+//     exit();
+// }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verifyOtp'])) {
     $otp = $_POST['otp'];
@@ -29,7 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verifyOtp'])) {
 
         echo "OTP verified successfully. User is logged in!";
         // Redirect to dashboard or any authenticated page
-        header('Location: ../Home.php');
+        $_SESSION['loggedin'] = true;
+        $_SESSION['email'] = $email;
+        header('Location: ../index.php');
         exit();
     } else {
         $error = "Invalid OTP. Please try again.";

@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $updateStmt->execute();
 
         // Send reset link via email
-        $resetLink = "http://yourdomain.com/reset_password.php?token=$token";
+        $resetLink = "https://onetri.ellequin.com/LOGIN/reset_password.php?token=$token";
         $mail = new PHPMailer(true);
         try {
             $mail->isSMTP();

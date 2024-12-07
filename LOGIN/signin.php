@@ -79,8 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signIn'])) {
                 // Store user email in session for OTP verification
                 $_SESSION['email'] = $email;
 
-                // Redirect to OTP verification page
-                $_SESSION['loggedin'] = true;
+                // // Redirect to OTP verification page
+                // $_SESSION['loggedin'] = true;
                 header('Location: verify_otp.php');
                 exit();
             } catch (Exception $e) {
