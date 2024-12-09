@@ -1,6 +1,6 @@
 <?php
 session_start(); // Start the session
-$isLoggedIn = isset($_SESSION['email']); // Check if the user is logged in (assumes 'email' is set in the session when logged in)
+$isLoggedIn = isset($_SESSION['user_id']); // Check if the user is logged in (assumes 'user_id' is set in the session when logged in)
 ?>
 <!DOCTYPE html>
 <html1 lang="en">
@@ -441,6 +441,9 @@ footer {
         text-align: center;
         margin-bottom: 20px;
     }
+    .social-icons {
+        justify-content: center;
+    }
 } 
 @media(max-width: 400px){
     .sidebar{
@@ -557,166 +560,166 @@ footer {
                 <div class="product" data-name="p-1">
                     <img src="sofa1.jpg" alt="">
                     <h3>OpulentOasis</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood,Good Lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱35,000.00</div>
                 </div>
                 
                 <div class="product" data-name="p-2">
                     <img src="sofa2.jpg" alt="">
                     <h3>LuxeLounge</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱15,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-3">
                     <img src="sofa3.jpg" alt="">
                     <h3>RegalRest</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱20,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-4">
                     <img src="sofa4.jpg" alt="">
                     <h3>AristocratArmchair</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱25,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-5">
                     <img src="sofa5.jpg" alt="">
                     <h3>MajesticManor</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱18,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-6">
                     <img src="sofa6.jpg" alt="">
                     <h3> SovereignSettee</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱12,000.00</div>
                 </div>    
 
                 <div class="product" data-name="p-7">
                     <img src="sofachair1.jpg" alt="">
                     <h3>CozyCharm</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱5,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-8">
                     <img src="sofachair2.jpg" alt="">
                     <h3>LoungeLuxe Chair</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱8,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-9">
                     <img src="sofachair3.jpg" alt="">
                     <h3>ComfortCushion</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱10,000.00</div>
                 </div>
 
                 <div class="product" data-name="p-10">
                     <img src="bed1.jpg" alt="">
                     <h3>DreamHaven Bed</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>Varnish Finish</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>Varnish Finish</p>
                     <div class="price">₱65,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-11">
                     <img src="bed2.jpg" alt="">
                     <h3> SerenitySlumber Bed</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>Varnish Finish</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>Varnish Finish</p>
                     <div class="price">₱35,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-12">
                     <img src="bed3.JPG" alt="">
                     <h3>CozyCove Bed</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br>linen cotton, Paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br>linen cotton, Paint</p>
                     <div class="price">₱20,000.00</div>
                 </div>
                 <div class="product" data-name="p-13">
                     <img src="1.jpg" alt="">
                     <h3>NobleNiche Cabinet</h3>
-                    <p>Plywood, solid wood, Mdf, Paint</p>
+                    <p>Marine Plywood, solid wood, Mdf, Paint</p>
                     <div class="price">₱15,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-14">
                     <img src="2.jpg" alt="">
                     <h3> MajesticManor Cupboard</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱100,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-15">
                     <img src="3.jpg" alt="">
                     <h3>MagnificenceMantle Cabinet</h3>
-                    <p>Plywood, solid wood, Mdf, Paint</p>
+                    <p>Marine Plywood, solid wood, Mdf, Paint</p>
                     <div class="price">₱50,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-16">
                     <img src="4.jpg" alt="">
                     <h3>EleganceEmbrace</h3>
-                    <p>Plywood, solid wood,Stainless, Paint</p>
+                    <p>Marine Plywood, solid wood,Stainless, Paint</p>
                     <div class="price">₱12,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-17">
                     <img src="5.jpg" alt="">
                     <h3> RefinedRendezvous Cabinet</h3>
-                    <p>Plywood, Solid Wood, Laminate</p>
+                    <p>Marine Plywood, Solid Wood, Laminate</p>
                     <div class="price">₱15,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-18">
                     <img src="6.jpg" alt="">
                     <h3>GlamourGrove Cupboard</h3>
-                    <p>Plywood, solid wood, Mdf</p>
+                    <p>Marine Plywood, solid wood, Mdf</p>
                     <div class="price">₱35,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-19">
                     <img src="7.jpg" alt="">
                     <h3>SplendorSuite Cabinet</h3>
-                    <p>Plywood, solid wood, Mdf</p>
+                    <p>Marine Plywood, solid wood, Mdf</p>
                     <div class="price">₱35,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-20">
                     <img src="8.jpg" alt="">
                     <h3>ExquisiteExpanse Cupboard</h3>
-                    <p>Plywood, solid wood, Glass, Mdf</p>
+                    <p>Marine Plywood, solid wood, Glass, Mdf</p>
                     <div class="price">₱30,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-21">
                     <img src="9.jpg" alt="">
                     <h3>PrestigePalace Cabinet</h3>
-                    <p>Plywood, solid wood, Paint</p>
+                    <p>Marine Plywood, solid wood, Paint</p>
                     <div class="price">₱40,000.00</div>
                 </div>
                 <div class="product" data-name="p-22">
                     <img src="table1.png" alt="">
                     <h3> ClassicCharm Table</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br>German Leather, Aluminum, Varnish Finish, Paint</p>
+                    <p>Marine Plywood, solid wood, 100% uratex foam, <br>German Leather, Aluminum, Varnish Finish, Paint</p>
                     <div class="price">₱15,000.00</div>
                 </div>
 
                 <div class="product" data-name="p-23">
                     <img src="table2.png" alt="">
                     <h3>ModernMajesty Table</h3>
-                    <p>Plywood, solid wood, Varnish Finish, Paint</p>
+                    <p>Marine Plywood, solid wood, Varnish Finish, Paint</p>
                     <div class="price">₱10,000.00</div>
                 </div>
 
                 <div class="product" data-name="p-24">
                     <img src="table3.png" alt="">
                     <h3>VintageVista Table</h3>
-                    <p>Plywood, Aluminum, Varnish Finish, Paint</p>
+                    <p>Marine Plywood, Aluminum, Varnish Finish, Paint</p>
                     <div class="price">₱5,500.00</div>
                 </div>
             </div>
@@ -730,7 +733,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofa1.jpg" alt="">
             <h3>OpulentOasis</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱35,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -741,7 +744,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofa2.jpg" alt="">
             <h3>LuxeLounge</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱15,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -752,7 +755,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofa3.jpg" alt="">
             <h3> RegalRest</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱20,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -763,7 +766,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofa4.jpg" alt="">
             <h3> AristocratArmchair</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱25,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -774,7 +777,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofa5.jpg" alt="">
             <h3>MajesticManor</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱18,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -785,7 +788,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofa6.jpg" alt="">
             <h3>SovereignSettee</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱12,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -796,7 +799,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofachair1.jpg" alt="">
             <h3>CozyCharm</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱5,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -807,7 +810,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofachair2.jpg" alt="">
             <h3>LoungeLuxe Chair</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱8,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -818,7 +821,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="sofachair3.jpg" alt="">
             <h3>ComfortCushion</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
             <div class="price">₱10,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -828,7 +831,7 @@ footer {
             <i class="fas fa-times"></i>
             <img src="bed1.jpg" alt="">
             <h3>DreamHaven Bed</h3>
-            <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>Varnish Finish</p>
+            <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>Varnish Finish</p>
             <div class="price">₱65,000.00</div>
             <div class="button">
                 <a href="contact.php" class="register">Register</a>
@@ -839,7 +842,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="bed2.jpg" alt="">
         <h3> SerenitySlumber Bed</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>Varnish Finish</p>
+        <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>Varnish Finish</p>
         <div class="price">₱35,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -850,7 +853,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="bed3.JPG" alt="">
         <h3>CozyCove Bed</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br>linen cotton, Paint</p>
+        <p>Marine Plywood, solid wood, 100% uratex foam, <br>linen cotton, Paint</p>
         <div class="price">₱20,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -861,7 +864,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="1.jpg" alt="">
         <h3>NobleNiche Cabinet</h3>
-        <p>Plywood, solid wood, Mdf, Paint</p>
+        <p>Marine Plywood, solid wood, Mdf, Paint</p>
         <div class="price">₱15,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -872,7 +875,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="2.jpg" alt="">
         <h3>MajesticManor Cupboard</h3>
-        <p>Plywood, solid wood, Mdf, Paint</p>
+        <p>Marine Plywood, solid wood, Mdf, Paint</p>
         <div class="price">₱100,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -883,7 +886,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="3.jpg" alt="">
         <h3>MagnificenceMantle Cabinet</h3>
-        <p>Plywood, solid wood, Mdf, Paint</p>
+        <p>Marine Plywood, solid wood, Mdf, Paint</p>
         <div class="price">₱50,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -894,7 +897,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="4.jpg" alt="">
         <h3>EleganceEmbrace</h3>
-        <p>Plywood, solid wood,Stainless, Paint</p>
+        <p>Marine Plywood, solid wood,Stainless, Paint</p>
         <div class="price">₱12,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -905,7 +908,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="5.jpg" alt="">
         <h3>RefinedRendezvous Cabinet</h3>
-        <p>Plywood, Solid Wood, Laminate</p>
+        <p>Marine Plywood, Solid Wood, Laminate</p>
         <div class="price">₱15,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -916,7 +919,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="6.jpg" alt="">
         <h3>GlamourGrove Cupboard</h3>
-        <p>Plywood, solid wood, Mdf</p>
+        <p>Marine Plywood, solid wood, Mdf</p>
         <div class="price">₱35,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -927,7 +930,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="7.jpg" alt="">
         <h3>SplendorSuite Cabinet</h3>
-        <p>Plywood, solid wood, Mdf</p>
+        <p>Marine Plywood, solid wood, Mdf</p>
         <div class="price">₱35,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -938,7 +941,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="8.jpg" alt="">
         <h3> ExquisiteExpanse Cupboard</h3>
-        <p>Plywood, solid wood, Glass, Mdf</p>
+        <p>Marine Plywood, solid wood, Glass, Mdf</p>
         <div class="price">₱30,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -949,7 +952,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="9.jpg" alt="">
         <h3>PrestigePalace Cabinet</h3>
-        <p>Plywood, solid wood, Paint</p>
+        <p>Marine Plywood, solid wood, Paint</p>
         <div class="price">₱40,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -960,7 +963,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="table1.png" alt="">
         <h3>ClassicCharm Table</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br>German Leather, Aluminum, Varnish Finish, Paint</p>
+        <p>Marine Plywood, solid wood, 100% uratex foam, <br>German Leather, Aluminum, Varnish Finish, Paint</p>
         <div class="price">₱15,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>

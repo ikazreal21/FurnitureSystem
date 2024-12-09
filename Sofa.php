@@ -1,6 +1,6 @@
 <?php
 session_start(); // Start the session
-$isLoggedIn = isset($_SESSION['email']); // Check if the user is logged in (assumes 'email' is set in the session when logged in)
+$isLoggedIn = isset($_SESSION['user_id']); // Check if the user is logged in (assumes 'user_id' is set in the session when logged in)
 ?>
 <!DOCTYPE html>
 <html1 lang="en">
@@ -453,6 +453,9 @@ footer {
         text-align: center;
         margin-bottom: 20px;
     }
+    .social-icons {
+        justify-content: center;
+    }
 }
 @media(max-width: 400px){
     .sidebar{
@@ -565,42 +568,42 @@ footer {
                 <div class="product" data-name="p-1">
                     <img src="sofa1.jpg" alt="">
                     <h3>OpulentOasis</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱35,000.00</div>
                 </div>
                 
                 <div class="product" data-name="p-2">
                     <img src="sofa2.jpg" alt="">
                     <h3>LuxeLounge</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱15,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-3">
                     <img src="sofa3.jpg" alt="">
                     <h3>RegalRest</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱20,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-4">
                     <img src="sofa4.jpg" alt="">
                     <h3>AristocratArmchair</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱25,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-5">
                     <img src="sofa5.jpg" alt="">
                     <h3>MajesticManor</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱18,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-6">
                     <img src="sofa6.jpg" alt="">
                     <h3> SovereignSettee</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱12,000.00</div>
                 </div> 
                
@@ -615,7 +618,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="sofa1.jpg" alt="">
         <h3>OpulentOasis</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+        <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
         <div class="price">₱35,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -626,7 +629,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="sofa2.jpg" alt="">
         <h3> LuxeLounge</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+        <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
         <div class="price">₱15,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -637,7 +640,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="sofa3.jpg" alt="">
         <h3>RegalRest</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+        <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
         <div class="price">₱20,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -648,7 +651,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="sofa4.jpg" alt="">
         <h3>AristocratArmchair</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+        <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
         <div class="price">₱25,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -659,7 +662,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="sofa5.jpg" alt="">
         <h3>MajesticManor</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+        <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
         <div class="price">₱18,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>
@@ -670,7 +673,7 @@ footer {
         <i class="fas fa-times"></i>
         <img src="sofa6.jpg" alt="">
         <h3>SovereignSettee</h3>
-        <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+        <p>Marine Plywood,  Good lumber, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
         <div class="price">₱12,000.00</div>
         <div class="button">
             <a href="contact.php" class="register">Register</a>

@@ -1,6 +1,6 @@
 <?php
 session_start(); // Start the session
-$isLoggedIn = isset($_SESSION['email']); // Check if the user is logged in (assumes 'email' is set in the session when logged in)
+$isLoggedIn = isset($_SESSION['user_id']); // Check if the user is logged in (assumes 'user_id' is set in the session when logged in)
 ?>
 <!DOCTYPE html>
 <html1 lang="en">
@@ -452,6 +452,9 @@ footer {
         text-align: center;
         margin-bottom: 20px;
     }
+    .social-icons {
+        justify-content: center;
+    }
 }
 @media(max-width: 400px){
     .sidebar{
@@ -567,21 +570,21 @@ footer {
             <div class="product" data-name="p-22">
                     <img src="table1.png" alt="">
                     <h3> ClassicCharm Table</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br>German Leather, Aluminum, Varnish Finish, Paint</p>
+                    <p>Marine Plywood, solid wood, 100% uratex foam, <br>German Leather, Aluminum, Varnish Finish, Paint</p>
                     <div class="price">₱15,000.00</div>
                 </div>
 
                 <div class="product" data-name="p-23">
                     <img src="table2.png" alt="">
                     <h3>ModernMajesty Table</h3>
-                    <p>Plywood, solid wood, Varnish Finish, Paint</p>
+                    <p>Marine Plywood, solid wood, Varnish Finish, Paint</p>
                     <div class="price">₱10,000.00</div>
                 </div>
 
                 <div class="product" data-name="p-24">
                     <img src="table3.png" alt="">
                     <h3>VintageVista Table</h3>
-                    <p>Plywood, Aluminum, Varnish Finish, Paint</p>
+                    <p>Marine Plywood, Aluminum, Varnish Finish, Paint</p>
                     <div class="price">₱5,500.00</div>
                 </div>
             </div>
@@ -594,7 +597,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="table1.png" alt="">
                 <h3>ClassicCharm Table</h3>
-                <p>Plywood, solid wood, 100% uratex foam, German Leather, Aluminum, Varnish Finish, Paint</p>
+                <p>Marine Plywood, solid wood, 100% uratex foam, German Leather, Aluminum, Varnish Finish, Paint</p>
                 <div class="price">₱15,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -605,7 +608,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="table2.png" alt="">
                 <h3>ModernMajesty Table</h3>
-                <p>Plywood, solid wood, Varnish Finish, Paint</p>
+                <p>Marine Plywood, solid wood, Varnish Finish, Paint</p>
                 <div class="price">₱10,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -616,7 +619,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="table3.png" alt="">
                 <h3>VintageVista Table</h3>
-                <p>Plywood, Aluminum, Varnish Finish, Paint</p>
+                <p>Marine Plywood, Aluminum, Varnish Finish, Paint</p>
                 <div class="price">₱5,500.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>

@@ -1,6 +1,6 @@
 <?php
 session_start(); // Start the session
-$isLoggedIn = isset($_SESSION['email']); // Check if the user is logged in (assumes 'email' is set in the session when logged in)
+$isLoggedIn = isset($_SESSION['user_id']); // Check if the user is logged in (assumes 'user_id' is set in the session when logged in)
 ?>
 <!DOCTYPE html>
 <html1 lang="en">
@@ -453,6 +453,9 @@ footer {
         text-align: center;
         margin-bottom: 20px;
     }
+    .social-icons {
+        justify-content: center;
+    }
 }
 @media(max-width: 400px){
     .sidebar{
@@ -566,63 +569,63 @@ footer {
             <div class="product" data-name="p-13">
                     <img src="1.jpg" alt="">
                     <h3>NobleNiche Cabinet</h3>
-                    <p>Plywood, solid wood, Mdf, Paint</p>
+                    <p>Marine Plywood, solid wood, Mdf, Paint</p>
                     <div class="price">₱15,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-14">
                     <img src="2.jpg" alt="">
                     <h3> MajesticManor Cupboard</h3>
-                    <p>Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
+                    <p>Marine Plywood, solid wood, 100% uratex foam, <br> leather / german leather, linen cotton, <br>polyester,fiberfill,paint</p>
                     <div class="price">₱100,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-15">
                     <img src="3.jpg" alt="">
                     <h3>MagnificenceMantle Cabinet</h3>
-                    <p>Plywood, solid wood, Mdf, Paint</p>
+                    <p>Marine Plywood, solid wood, Mdf, Paint</p>
                     <div class="price">₱50,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-16">
                     <img src="4.jpg" alt="">
                     <h3>EleganceEmbrace</h3>
-                    <p>Plywood, solid wood,Stainless, Paint</p>
+                    <p>Marine Plywood, solid wood,Stainless, Paint</p>
                     <div class="price">₱12,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-17">
                     <img src="5.jpg" alt="">
                     <h3> RefinedRendezvous Cabinet</h3>
-                    <p>Plywood, Solid Wood, Laminate</p>
+                    <p>Marine Plywood, Solid Wood, Laminate</p>
                     <div class="price">₱15,000.00</div>
                 </div>
             
                 <div class="product" data-name="p-18">
                     <img src="6.jpg" alt="">
                     <h3>GlamourGrove Cupboard</h3>
-                    <p>Plywood, solid wood, Mdf</p>
+                    <p>Marine Plywood, solid wood, Mdf</p>
                     <div class="price">₱35,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-19">
                     <img src="7.jpg" alt="">
                     <h3>SplendorSuite Cabinet</h3>
-                    <p>Plywood, solid wood, Mdf</p>
+                    <p>Marine Plywood, solid wood, Mdf</p>
                     <div class="price">₱35,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-20">
                     <img src="8.jpg" alt="">
                     <h3>ExquisiteExpanse Cupboard</h3>
-                    <p>Plywood, solid wood, Glass, Mdf</p>
+                    <p>Marine Plywood, solid wood, Glass, Mdf</p>
                     <div class="price">₱30,000.00</div>
                 </div>
         
                 <div class="product" data-name="p-21">
                     <img src="9.jpg" alt="">
                     <h3>PrestigePalace Cabinet</h3>
-                    <p>Plywood, solid wood, Paint</p>
+                    <p>Marine Plywood, solid wood, Paint</p>
                     <div class="price">₱40,000.00</div>
                 </div>
             </div>
@@ -635,7 +638,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="1.jpg" alt="">
                 <h3> NobleNiche Cabinet</h3>
-                <p>Plywood, solid wood, Mdf, Paint</p>
+                <p>Marine Plywood, solid wood, Mdf, Paint</p>
                 <div class="price">₱15,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -646,7 +649,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="2.jpg" alt="">
                 <h3>MajesticManor Cupboard</h3>
-                <p>Plywood, Solid Wood, Mdf, Paint</p>
+                <p>Marine Plywood, Solid Wood, Mdf, Paint</p>
                 <div class="price">₱100,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -657,7 +660,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="3.jpg" alt="">
                 <h3>MagnificenceMantle Cabinet</h3>
-                <p>Plywood, solid wood, Mdf, <br>paint</p>
+                <p>Marine Plywood, solid wood, Mdf, <br>paint</p>
                 <div class="price">₱50,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -668,7 +671,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="4.jpg" alt="">
                 <h3> EleganceEmbrace</h3>
-                <p>Plywood, Solid Wood, Stainless, Paint</p>
+                <p>Marine Plywood, Solid Wood, Stainless, Paint</p>
                 <div class="price">₱12,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -679,7 +682,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="5.jpg" alt="">
                 <h3> RefinedRendezvous Cabinet</h3>
-                <p>Plywood, Solid Wood, Laminate</p>
+                <p>Marine Plywood, Solid Wood, Laminate</p>
                 <div class="price">₱15,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -690,7 +693,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="6.jpg" alt="">
                 <h3>GlamourGrove Cupboard</h3>
-                <p>Plywood, solid wood, Mdf</p>
+                <p>Marine Plywood, solid wood, Mdf</p>
                 <div class="price">₱35,000,00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -701,7 +704,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="7.jpg" alt="">
                 <h3>SplendorSuite Cabinet</h3>
-                <p>Plywood, Solid Wood, Mdf</p>
+                <p>Marine Plywood, Solid Wood, Mdf</p>
                 <div class="price">₱35,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -712,7 +715,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="8.jpg" alt="">
                 <h3>ExquisiteExpanse Cupboard</h3>
-                <p>Plywood, solid wood, Mdf, Glass</p>
+                <p>Marine Plywood, solid wood, Mdf, Glass</p>
                 <div class="price">₱30,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>
@@ -723,7 +726,7 @@ footer {
                 <i class="fas fa-times"></i>
                 <img src="9.jpg" alt="">
                 <h3>PrestigePalace Cabinet</h3>
-                <p>Plywood, Solid Wood, Paint</p>
+                <p>Marine Plywood, Solid Wood, Paint</p>
                 <div class="price">₱40,000.00</div>
                 <div class="button">
                     <a href="contact.php" class="register">Register</a>

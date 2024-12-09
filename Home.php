@@ -1,6 +1,7 @@
 <?php
 session_start(); // Start the session
-$isLoggedIn = isset($_SESSION['email']); // Check if the user is logged in (assumes 'email' is set in the session when logged in)
+$isLoggedIn = isset($_SESSION['user_id']); // Check if the user is logged in (assumes 'user_id' is set in the session when logged in)
+?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +37,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: lightgrey;
+    
 } 
 
 .logo {
@@ -77,7 +79,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(240, 240, 240, 0.07);
+    background-color: #f18930;
 }
 
 .sidebar {
@@ -123,7 +125,7 @@ nav a:hover {
     position: absolute;
     width: 150px;
     padding: 0;
-    background-color: rgba(240, 240, 240, 0.07);
+    background-color:#222;
     z-index: 999;
 }
 
@@ -250,7 +252,7 @@ footer {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 5px;
+    gap: 10px;
 }
 
 .footer-content {
@@ -260,8 +262,9 @@ footer {
 }
 
 .footer-content h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
     color: #f18930;
 }
 
@@ -305,7 +308,7 @@ footer {
 }
 
 .list li {
-    margin-bottom: 10px; 
+    margin-bottom: 15px; 
 }
 
 .bottom-bar {
@@ -350,6 +353,72 @@ footer {
 .contact-info a:hover {
     color: #f18930;
 }
+
+.newslettersignup {
+    margin-top: -80px;
+    margin-bottom: 50px;
+    text-align: right;
+    margin-right: 95px
+    
+}
+
+.newslettersignup h3 {
+    color: #f18930;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin: 0 auto;
+    margin-right: 95px;
+}
+
+.newslettersignup p {
+    margin-bottom: 10px;
+    margin-left: 95px;
+}
+
+.newslettersignup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputgroup {
+    display: flex;
+    
+    max-width: 300px;
+    margin: 5px auto;
+    text-align: right;
+    margin-right: 90px;
+}
+
+.newslettersignup input[type="email"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.newslettersignup button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.newslettersignup button:hover {
+    background-color: #f18930;
+}
+
+.privacy {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    margin: 0 auto;
+    margin-right: 40px;
+}
+
 /* responsive navbar */
 @media (max-width: 800px) {
     .hideOnMobile {
@@ -385,6 +454,57 @@ footer {
     }
 }
 
+.customer-reviews {
+    width: 70%;
+    margin: 50px auto;
+    padding: 10px;
+    background-color:
+    #3b3b3b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customer-reviews .section-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #f18930;
+}
+
+.review {
+    margin-bottom: 5px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review p {
+    font-size: 15px; /* Decrease the font size */
+    color: white;
+    margin: 3px 0;
+}
+
+.review p strong {
+    font-size: 14px; /* Slightly smaller strong text */
+    color: #f18930;
+}
+
+.review .stars {
+    color: #f18930;
+    font-size: 16px; /* Decrease the star size */
+    margin-bottom: 3px;
+}
+
+.review .date {
+    font-size: 10px; /* Smaller date text */
+    color: #999;
+    margin-bottom: 3px;
+}
+
+
 @media (max-width: 400px) {
     .sidebar {
         width: 100%;
@@ -411,7 +531,7 @@ footer {
 <nav>
     <img src="logo.png" class="logo">
     <ul class="sidebar">
-        <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
         <li><a href="Home.php"><b>Home</b></a></li>
         <li><a href="aboutus.php"><b>About us</b></a></li>
         <li><a href="contact.php"><b>Contact us</b></a></li>
@@ -425,7 +545,8 @@ footer {
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
-        <li><a href="orderform (1).php"><b>Order Form</b></a></li>
+        
+        <li><a href="orderform (1) (1).php"><b>Order Form</b></a></li>
         <li>
             <?php if ($isLoggedIn): ?>
                 <a href="logout.php"><b>Log Out</b></a>
@@ -433,6 +554,7 @@ footer {
                 <a href="LOGIN/signin.php"><b>Log In</b></a>
             <?php endif; ?>
         </li>
+        <li><a href="login.php"><b>Log In</b></a></li>
     </ul>
     <ul>
         <li class="hideOnMobile"><a href="Home.php"><b>Home</b></a></li>
@@ -443,12 +565,13 @@ footer {
             <ul class="dropdown">
                 <li><a href="Sofa.php"><b>Sofa</b></a></li>
                 <li><a href="Sofachair.php"><b>Sofa Chair</b></a></li>
-                <li><a href="Bed.php"><b>Bed</b></a></li>
-                <li><a href="Cabinets.php"><b>Cabinets</b></a></li>
+                <li><a href="bed.php"><b>Bed</b></a></li>
+                <li><a href="cabinets.php"><b>Cabinets</b></a></li>
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
-        <li class="hideOnMobile"><a href="orderform (1).php"><b>Order Form</b></a></li>
+        <li class="hideOnMobile"><a href="orderform (1) (1).php"><b>Order Form</b></a></li>
+        <li><a href="login.php"><b>Log In</b></a></li>   
         <li>
             <?php if ($isLoggedIn): ?>
                 <a href="logout.php"><b>Log Out</b></a>
@@ -456,10 +579,10 @@ footer {
                 <a href="LOGIN/signin.php"><b>Log In</b></a>
             <?php endif; ?>
         </li>
-        <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
     </ul>
 </nav>
- 
+
 
     <script>
         function showSidebar(){
@@ -530,6 +653,35 @@ footer {
                 </div>
             </div>
         
+
+            <div class="customer-reviews">
+    <h2 class="section-header">Customer Reviews</h2>
+    <div class="review">
+        <p><strong>John D.</strong></p>
+        <div class="stars">★★★★☆</div>
+        <p class="date">March 5, 2024</p>
+        <p>"The sofa I purchased was amazing! The craftsmanship is top-notch, and it's incredibly comfortable."</p>
+    </div>
+    <div class="review">
+        <p><strong>Maria S.</strong></p>
+        <div class="stars">★★★★★</div>
+        <p class="date">February 28, 2024</p>
+        <p>"Beautiful cabinet designs! I also appreciate how accommodating the staff were during my visit."</p>
+    </div>
+    <div class="review">
+        <p><strong>Emily R.</strong></p>
+        <div class="stars">★★★★★</div>
+        <p class="date">February 20, 2024</p>
+        <p>"Great quality tables and chairs. I love how they balance aesthetics and functionality. Will definitely come back!"</p>
+    </div>
+    <div class="review">
+        <p><strong>Michael T.</strong></p>
+        <div class="stars">★★★★☆</div>
+        <p class="date">January 15, 2024</p>
+        <p>"I highly recommend their upholstery services. They made my old sofa look brand new!"</p>
+    </div>
+</div>
+
             <footer>
     <div class="container1">
         <!-- Contact Us Section -->
@@ -564,6 +716,18 @@ footer {
         </div>
     </div>
 
+    <div class="newslettersignup">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Get the latest updates, news, and exclusive offers straight to your inbox.</p>
+        <form action="/subscribe" method="post">
+            <div class="inputgroup">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" name="subscribe">Subscribe</button>
+            </div>
+        </form>
+        <p class="privacy">We respect your privacy. Your email address will not be shared.</p>
+    </div> 
+
     <!-- Bottom Bar -->
     <div class="bottom-bar">
         <p>&copy; 2024 One Tri-Go General Services & Upholstery Shop. All rights reserved.</p>
@@ -575,5 +739,4 @@ footer {
     
 </body> 
 </html> 
-
 
