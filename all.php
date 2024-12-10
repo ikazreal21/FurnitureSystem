@@ -549,7 +549,7 @@ footer {
             <a href="Sofa.php"><button data-name="sofa">Sofa</button></a>
             <a href="Sofachair.php"><button data-name="sofachair">Sofachair</button></a>
             <a href="bed.php"><button data-name="bed">Bed</button></a>
-            <a href="Cabinets.php"><button data-name="cabinets">Cabinets</button></a>
+            <a href="cabinets.php"><button data-name="cabinets">Cabinets</button></a>
             <a href="table.php"><button data-name="table">Table</button></a>
         </div>
         </div>
