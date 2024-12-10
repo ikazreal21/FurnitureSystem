@@ -541,7 +541,7 @@ footer {
                 <li><a href="Sofa.php"><b>Sofa</b></a></li>
                 <li><a href="Sofachair.php"><b>Sofa Chair</b></a></li>
                 <li><a href="bed.php"><b>Bed</b></a></li>
-                <li><a href="Cabinets.php"><b>Cabinet</b></a></li>
+                <li><a href="cabinets.php"><b>Cabinet</b></a></li>
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
