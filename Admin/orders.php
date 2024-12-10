@@ -1,9 +1,21 @@
+<?php
+// Include PHPMailer
+session_start();
+
+if ($_SESSION['admin'] == false) {
+    header("Location: ../LOGIN/signin.php"); // Redirect to the home page
+    exit();
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Dashboard</title>
+  <title>One Tri Admin</title>
   <style>
     /* General Reset */
     * {
@@ -145,12 +157,116 @@
         width: 100%;
       }
     }
+    /* Sidebar Styling */
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.collapsed {
+      transform: translateX(-250px);
+    }
+
+    .sidebar h4 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      display: block;
+      border-radius: 5px;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #495057;
+    }
+
+    /* Close Button */
+    .close-btn {
+      display: none;
+      text-align: center;
+      background-color: #dc3545;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .sidebar:not(.collapsed) .close-btn {
+      display: block;
+    }
+
+    /* Toggle Button */
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .sidebar:not(.collapsed) ~ .toggle-btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 270px;
+      padding: 20px;
+      flex: 1;
+      transition: margin-left 0.3s ease-in-out;
+    }
+
+    .sidebar.collapsed ~ .main-content {
+      margin-left: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: absolute;
+        z-index: 1000;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h4>Admin Dashboard</h4>
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">&times;</button>
+    <h4>One Tri Admin</h4>
     <ul>
       <li><a href="dashboard.php">Home</a></li>
       <li><a href="add_products.php">Products</a></li>
@@ -159,14 +275,12 @@
     </ul>
   </div>
 
+  <!-- Toggle Button -->
+  <button class="toggle-btn" id="toggle-btn">☰</button>
   <!-- Main Content -->
   <div class="main-content">
     <!-- Dashboard Cards -->
     <div class="cards">
-      <div class="card">
-        <h5>Total Products</h5>
-        <p id="product-count">0</p>
-      </div>
       <div class="card">
         <h5>Total Orders</h5>
         <p id="order-count">0</p>
@@ -182,68 +296,112 @@
     <table id="order-table">
       <thead>
         <tr>
-          <th>ID</th>
           <th>Name</th>
           <th>Email</th>
           <th>Phone</th>
-          <th>Type</th>
-          <th>Dimensions</th>
+          <th>Furniture Type</th>
+          <th>Height</th>
+          <th>Width</th>
+          <th>Length</th>
           <th>Material</th>
-          <th>Color</th>
-          <th>Features</th>
-          <th>Budget</th>
+          <th>Sub Material</th>
+          <th>Color Pallete</th>
+          <th>Custom Color</th>
+          <th>Design</th>
           <th>Address</th>
-          <th>Reference</th>
+          <!-- <th>Province</th>
+          <th>Municipality</th>
+          <th>Barangay</th>
+          <th>Landmark</th>
+          <th>Postalcode</th>
+          <th>Housenumber</th> -->
+          <th>Note</th>
           <!-- <th>Actions</th> -->
         </tr>
       </thead>
       <tbody>
         <!-- Order rows will be injected here -->
+         <?php 
+         $host = '192.168.1.228';
+         $user = 'cbadmin';
+         $password = '%rga8477#KC86&';
+         $database = 'go';
+         
+         // Establish connection
+         $conn = new mysqli($host, $user, $password, $database);
+         
+         // Check connection
+         if ($conn->connect_error) {
+             die("Connection failed: " . $conn->connect_error);
+         }
+         
+         // Fetch orders
+         $sql = "SELECT * FROM orderform";
+         $result = $conn->query($sql);
+         
+         if ($result->num_rows > 0) {
+             while ($row = $result->fetch_assoc()) {
+                 echo "<tr>
+                         <td>{$row['name']}</td>
+                         <td>{$row['email']}</td>
+                         <td>{$row['phone']}</td>
+                         <td>{$row['furniture_type']}</td>
+                         <td>{$row['height']}</td>
+                         <td>{$row['width']}</td>
+                         <td>{$row['length']}</td>
+                         <td>{$row['material']}</td>
+                         <td>{$row['sub_material']}</td>
+                         <td>{$row['color_pallete']}</td>
+                         <td>{$row['custom_color']}</td>
+                         <td>{$row['design']}</td>
+                         <td>{$row['housenumber']}, {$row['barangay']}, {$row['municipality']}, {$row['province']}, {$row['postalcode']}, {$row['landmark']}</td>
+                         <td>{$row['note']}</td>
+                       </tr>";
+             }
+         } else {
+             echo "<tr><td colspan='20'>No orders found</td></tr>";
+         }
+         
+         $conn->close();
+          ?>
       </tbody>
     </table>
   </div>
-
   <script>
-    // Example order data fetching (This would be replaced by actual server-side fetching)
-    const orderCount = document.getElementById('order-count');
-    const orderTable = document.getElementById('order-table').getElementsByTagName('tbody')[0];
+    // JavaScript to handle sidebar toggling
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggle-btn');
+    const closeBtn = document.getElementById('close-btn');
 
-    // Simulated order data
-    const orders = [
-      { id: 1, name: "John Doe", email: "john@example.com", phone: "123456789", type: "Product", dimensions: "10x10x10", material: "Plastic", color: "Red", features: "Waterproof", budget: "100", address: "123 Main St", reference: "Ref123" },
-      { id: 2, name: "Jane Doe", email: "jane@example.com", phone: "987654321", type: "Service", dimensions: "N/A", material: "N/A", color: "Blue", features: "Durable", budget: "200", address: "456 Elm St", reference: "Ref124" }
-    ];
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.remove('collapsed');
+    });
 
-    // Display orders in the table
-    function displayOrders() {
-      orderCount.textContent = orders.length;
-      orderTable.innerHTML = '';
-      orders.forEach(order => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${order.id}</td>
-          <td>${order.name}</td>
-          <td>${order.email}</td>
-          <td>${order.phone}</td>
-          <td>${order.type}</td>
-          <td>${order.dimensions}</td>
-          <td>${order.material}</td>
-          <td>${order.color}</td>
-          <td>${order.features}</td>
-          <td>${order.budget}</td>
-          <td>${order.address}</td>
-          <td>${order.reference}</td>
-          `;
-          //   <td>
-          //     <button class="btn-edit">Edit</button>
-          //     <button class="btn-delete">Delete</button>
-          //   </td>
-        orderTable.appendChild(row);
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.add('collapsed');
+    });
+
+  function updateOrderCount() {
+    fetch('get_order_count.php')
+      .then(response => response.json())
+      .then(data => {
+        const orderCountElement = document.getElementById('order-count');
+        if (data.order_count !== undefined) {
+          orderCountElement.textContent = `${data.order_count}`;
+        } else {
+          orderCountElement.textContent = `Error fetching order count`;
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching order count:', error);
+        const orderCountElement = document.getElementById('order-count');
+        orderCountElement.textContent = `Error fetching order count`;
       });
-    }
+  }
 
-    // Call displayOrders to populate the table
-    displayOrders();
+// Update order count on page load
+updateOrderCount();
+
   </script>
 </body>
 </html>

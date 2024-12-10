@@ -500,7 +500,7 @@ footer {
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
-        <li><a href="orderform (1).php"><b>Order Form</b></a></li>
+        <li><a href="orderform_1.php"><b>Order Form</b></a></li>
         <li>
             <?php if ($isLoggedIn): ?>
                 <a href="logout.php"><b>Log Out</b></a>
@@ -523,7 +523,7 @@ footer {
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
-        <li class="hideOnMobile"><a href="orderform (1).php"><b>Order Form</b></a></li>
+        <li class="hideOnMobile"><a href="orderform_1.php"><b>Order Form</b></a></li>
         <li>
             <?php if ($isLoggedIn): ?>
                 <a href="logout.php"><b>Log Out</b></a>

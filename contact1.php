@@ -3,9 +3,9 @@ session_start(); // Start the session
 $isLoggedIn = isset($_SESSION['user_id']); // Check if the user is logged in (assumes 'user_id' is set in the session when logged in)
 
 // Database connection
-$localhost = '127.0.0.1';
-$user = 'root';
-$password = '';
+$localhost = '192.168.1.228';
+$user = 'cbadmin';
+$password = '%rga8477#KC86&';
 $database = 'go';
 
 $conn = new mysqli($localhost, $user, $password, $database);
@@ -469,6 +469,7 @@ footer {
         margin-bottom: 20px;
     }
 } 
+
 </style>
 <nav>
     <img src="logo.png" class="logo">
@@ -482,12 +483,12 @@ footer {
             <ul class="dropdown">
                 <li><a href="Sofa.php"><b>Sofa</b></a></li>
                 <li><a href="Sofachair.php"><b>Sofa Chair</b></a></li>
-                <li><a href="Bed.php"><b>Bed</b></a></li>
+                <li><a href="bed.php"><b>Bed</b></a></li>
                 <li><a href="Cabinets.php"><b>Cabinet</b></a></li>
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
-        <li><a href="orderform (1) (1).php"><b>Order Form</b></a></li>
+        <li><a href="orderform_1.php"><b>Order Form</b></a></li>
         <li>
             <?php if ($isLoggedIn): ?>
                 <a href="logout.php"><b>Log Out</b></a>
@@ -505,12 +506,12 @@ footer {
             <ul class="dropdown">
                 <li><a href="Sofa.php"><b>Sofa</b></a></li>
                 <li><a href="Sofachair.php"><b>Sofa Chair</b></a></li>
-                <li><a href="Bed.php"><b>Bed</b></a></li>
+                <li><a href="bed.php"><b>Bed</b></a></li>
                 <li><a href="Cabinets.php"><b>Cabinets</b></a></li>
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
-        <li class="hideOnMobile"><a href="orderform (1) (1).php"><b>Order Form</b></a></li>
+        <li class="hideOnMobile"><a href="orderform_1.php"><b>Order Form</b></a></li>
         <li>
             <?php if ($isLoggedIn): ?>
                 <a href="logout.php"><b>Log Out</b></a>

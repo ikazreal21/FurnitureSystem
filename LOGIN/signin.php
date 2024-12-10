@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signIn'])) {
             if ($email === 'admin@admin.com') {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['email'] = $email;
+                $_SESSION['admin'] = true;
                 header("Location: ../Admin/dashboard.php");
                 exit();
             }

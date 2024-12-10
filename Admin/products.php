@@ -2,7 +2,7 @@
 $host = '192.168.1.228';
 $dbname = 'go';
 $username = 'cbadmin';
-$password = '';
+$password = '%rga8477#KC86&';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);

@@ -1,9 +1,21 @@
+<?php
+// Include PHPMailer
+session_start();
+
+if ($_SESSION['admin'] == false) {
+    header("Location: ../LOGIN/signin.php"); // Redirect to the home page
+    exit();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Management Dashboard</title>
+  <title>One Tri Admin</title>
   <style>
     /* General Reset */
     * {
@@ -174,12 +186,116 @@
       color: white;
     }
 
+    /* Sidebar Styling */
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.collapsed {
+      transform: translateX(-250px);
+    }
+
+    .sidebar h4 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      display: block;
+      border-radius: 5px;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #495057;
+    }
+
+    /* Close Button */
+    .close-btn {
+      display: none;
+      text-align: center;
+      background-color: #dc3545;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .sidebar:not(.collapsed) .close-btn {
+      display: block;
+    }
+
+    /* Toggle Button */
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .sidebar:not(.collapsed) ~ .toggle-btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 270px;
+      padding: 20px;
+      flex: 1;
+      transition: margin-left 0.3s ease-in-out;
+    }
+
+    .sidebar.collapsed ~ .main-content {
+      margin-left: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: absolute;
+        z-index: 1000;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Sidebar -->
-  <div class="sidebar">
-    <h4>Admin Dashboard</h4>
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" style="text-align: center;" id="close-btn">&times;</button>
+    <h4>One Tri Admin</h4>
     <ul>
       <li><a href="dashboard.php">Home</a></li>
       <li><a href="add_products.php">Products</a></li>
@@ -188,6 +304,11 @@
     </ul>
   </div>
 
+  <!-- Toggle Button -->
+  <button class="toggle-btn" id="toggle-btn">☰</button>
+
+
+  <!-- Toggle Button -->
   <!-- Main Content -->
   <div class="main-content">
     <!-- Dashboard Cards -->
@@ -319,6 +440,20 @@
 
     // Initial fetch
     fetchProducts();
+  </script>
+  <script>
+    // JavaScript to handle sidebar toggling
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggle-btn');
+    const closeBtn = document.getElementById('close-btn');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.remove('collapsed');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.add('collapsed');
+    });
   </script>
 </body>
 </html>

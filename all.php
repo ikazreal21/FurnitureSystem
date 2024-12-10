@@ -483,12 +483,12 @@ footer {
             <ul class="dropdown">
                 <li><a href="Sofa.php"><b>Sofa</b></a></li>
                 <li><a href="Sofachair.php"><b>Sofa Chair</b></a></li>
-                <li><a href="Bed.php"><b>Bed</b></a></li>
+                <li><a href="bed.php"><b>Bed</b></a></li>
                 <li><a href="Cabinets.php"><b>Cabinet</b></a></li>
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
-        <li><a href="orderform (1).php"><b>Order Form</b></a></li>
+        <li><a href="orderform_1.php"><b>Order Form</b></a></li>
         <li>
             <?php if ($isLoggedIn): ?>
                 <a href="logout.php"><b>Log Out</b></a>
@@ -506,12 +506,12 @@ footer {
             <ul class="dropdown">
                 <li><a href="Sofa.php"><b>Sofa</b></a></li>
                 <li><a href="Sofachair.php"><b>Sofa Chair</b></a></li>
-                <li><a href="Bed.php"><b>Bed</b></a></li>
+                <li><a href="bed.php"><b>Bed</b></a></li>
                 <li><a href="Cabinets.php"><b>Cabinets</b></a></li>
                 <li><a href="table.php"><b>Tables</b></a></li> 
             </ul>
         </li>
-        <li class="hideOnMobile"><a href="orderform (1).php"><b>Order Form</b></a></li>
+        <li class="hideOnMobile"><a href="orderform_1.php"><b>Order Form</b></a></li>
         <li>
             <?php if ($isLoggedIn): ?>
                 <a href="logout.php"><b>Log Out</b></a>
@@ -548,7 +548,7 @@ footer {
             <a href="all.php"><button data-name="all">Show all</button></a>
             <a href="Sofa.php"><button data-name="sofa">Sofa</button></a>
             <a href="Sofachair.php"><button data-name="sofachair">Sofachair</button></a>
-            <a href="Bed.php"><button data-name="bed">Bed</button></a>
+            <a href="bed.php"><button data-name="bed">Bed</button></a>
             <a href="Cabinets.php"><button data-name="cabinets">Cabinets</button></a>
             <a href="table.php"><button data-name="table">Table</button></a>
         </div>
